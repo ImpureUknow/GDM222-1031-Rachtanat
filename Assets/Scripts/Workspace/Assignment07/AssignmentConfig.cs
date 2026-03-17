@@ -1,18 +1,18 @@
-namespace Assignment01
+namespace Assignment08
 {
     public class AssignmentConfig
     {
         /// <summary>
         /// Name of the assignment.
         /// </summary>  
-        public const string AssignmentName = "Assignment 02";
+        public const string AssignmentName = "Assignment 08";
 
         /// <summary>
         /// Description of the assignment.
         /// </summary>
-        public const string AssignmentDescription = "Introduction to Iteration Statements, for/foreach Loop, while/do While Loop, One-Dimensional Array, Creating Arrays, Initializing Array, Arrays and Loops: Use loops to easily access an Array, List in C# and its application, Two-Dimensional Array";
+        public const string AssignmentDescription = "Searching Algorithms in Game Development";
 
-        public const string AssignmentResourceID = "bu.2025.sem-1.gi262.as02";
+        public const string AssignmentResourceID = "bu.2025.sem-1.gi262.as08";
 
         /// <summary>
         /// Version of the assignment.
@@ -25,14 +25,14 @@ namespace Assignment01
         /// </summary> 
         public static string[] AssignmentTestcaseFiles = new string[]
         {
-            "Assets/Scripts/Workspace/Assignment01/Assignment_Testcase.cs"
+            "Assets/Scripts/Workspace/Assignment/Assignment_Testcase.cs"
         };
 
         /// <summary>
         /// Checksum for the combined all assignment testcase files. This is used to verify the integrity of the assignment files.
         /// for preventing tampering or accidental changes of the assignment files.
         /// </summary>
-        public const string AssignmentTestcaseFilesChecksum = "d41d8cd98f00b204e9800998ecf8427e";
+        public const string AssignmentTestcaseFilesChecksum = "";
 
         public const string ApiBaseUrl = "https://grading-system-bu.happygocoding.com";
     }

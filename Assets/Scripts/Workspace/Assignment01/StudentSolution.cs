@@ -5,7 +5,7 @@ using AssignmentSystem.Services;
 using UnityEngine;
 using Debug = AssignmentSystem.Services.AssignmentDebugConsole;
 
-namespace Assignment
+namespace Assignment01
 {
     public class StudentSolution : MonoBehaviour, IAssignment
     {
@@ -289,7 +289,7 @@ namespace Assignment
                 i++;
             }
 
-            Debug.Log("ผลรวมของ n จาก 0 ถึง " + n + " คือ " + sum);
+            Debug.Log($"ยผร…รรรยขรยง n ยจร’ยก 0 ยถร–ยง {n} ยคร—ร {sum}");
         }
 
         public void AS11_SpawnEnemies(int[] enemyHPs, GameObject enemyPrefab)

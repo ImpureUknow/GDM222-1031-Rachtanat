@@ -70,12 +70,12 @@ namespace Assignment03
 
         public void LCT02_SyntaxHashTable()
         {
-            
+
             Hashtable hashtable = new Hashtable();
             //Key Value
-            hashtable.Add(1,"Apple");
-            hashtable.Add(2,"Coconut");
-            hashtable.Add("bad-fruit","Rotten Tomato");
+            hashtable.Add(1, "Apple");
+            hashtable.Add(2, "Banana");
+            hashtable.Add("bad-fruit", "Rotten Tomato");
 
             string fruit1 = (string)hashtable[1];
             string fruit2 = (string)hashtable[2];
@@ -351,34 +351,60 @@ namespace Assignment03
 
         public void EX01_GameEventQueue(LinkedList<GameEvent> eventQueue)
         {
-            if (eventQueue == null || eventQueue.Count == 0)
-            {
-                Debug.Log("Event queue is empty");
-                return;
-            }
-
             while (eventQueue.Count > 0)
             {
                 GameEvent currentEvent = eventQueue.First.Value;
                 eventQueue.RemoveFirst();
 
-                Debug.Log("Processing event: " + currentEvent.ToString());
+                string msg = currentEvent.Name;
+                string type = currentEvent.EventType;
+
+                Debug.Log("Processing event: " + msg);
                 Debug.Log("Remaining events in queue: " + eventQueue.Count);
+
+                if (type == "enemy")
+                {
+                    Debug.Log("Enemy event processed - " + msg);
+                }
+                else if (type == "powerup")
+                {
+                    Debug.Log("Power-up event processed - " + msg);
+                }
+                else if (type == "level")
+                {
+                    Debug.Log("Level event processed - " + msg);
+                }
+                else if (type == "achievement")
+                {
+                    Debug.Log("Achievement unlocked - " + msg);
+                }
+                else
+                {
+                    Debug.Log("Generic event processed - " + msg);
+                }
             }
         }
 
         public void EX02_PlayerStatsTracker(Dictionary<string, int> playerStats, string statName, int value)
         {
+            if (playerStats == null) return;
+
             if (playerStats.ContainsKey(statName))
             {
-                playerStats[statName] += value; 
+                playerStats[statName] += value;
             }
             else
             {
                 playerStats.Add(statName, value);
             }
 
-            Debug.Log(statName + " = " + playerStats[statName]);
+            Debug.Log("Updated " + statName + ": " + playerStats[statName]);
+            Debug.Log("Current player statistics:");
+
+            foreach (KeyValuePair<string, int> stat in playerStats)
+            {
+                Debug.Log(stat.Key + ": " + stat.Value);
+            }
         }
 
         #endregion
